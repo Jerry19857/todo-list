@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card frame-header border border-secondary">
+    <div class="row">
+      <h1 class="col-12 text-center text-header">TODO LIST</h1>
+    </div>
+  </div>
+  <div class="card-body frame-body">
+    <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tasks</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let todoList of todoLists; index as index">
+            <th scope="row">{{ index + 1 }}</th>
+            <td>{{ todoList.task }}</td>
+            <td>{{ todoList.date }}</td>
+            <td>{{ todoList.time }}</td>
+            <td>{{ todoList.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

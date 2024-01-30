@@ -1,0 +1,191 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+	--mc-primary-color: #8bc540;
+	--mc-green-100: #ddeec6;
+	--mc-green-1000: #2f6b13;
+	--mc-white-color: #ffffff;
+	--mc-gray-color: #91a4ae;
+	--mc-red-color: #da5b49;
+	--mc-primary-faded-color: #f1f8e8;
+	--mc-text-primary-color: #38454c;
+	--mc-text-secondary-color: #657884;
+	--mc-gray-50: #fafafa;
+	--mc-gray-100: #f2f4f6;
+	--mc-gray-200: #dae1e6;
+	--mc-gray-300: #cfd8dc;
+	--mc-gray-400: #b0bec5;
+	--mc-magenta: #771c35;
+
+  --mc-font-size-regular: 16px;
+}
+
+html {
+	overflow: hidden;
+}
+
+html,
+body {
+	height: 100%;
+  font-family: 'Font1', serif !important;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.disabled {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.frame {
+	border-style: solid;
+	border-color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	appearance: textfield;
+}
+
+.checkbox {
+	position: relative;
+	padding-left: 42px;
+	user-select: none;
+}
+
+.checkbox input {
+	display: none;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 26px;
+	width: 26px;
+	background-color: #fff;
+	border: 1px solid var(--mc-primary-color);
+	border-radius: 4px;
+}
+
+.checkbox input:checked ~ .checkmark {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background-color: var(--mc-primary-color);
+}
+
+.checkbox input ~ .checkmark {
+	color: #fff;
+	background-color: #fff;
+}
+
+.swal2-title {
+	font-size: 24px;
+}
+
+.loading-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+
+.autocomplete-container {
+	box-shadow: none !important;
+}
+
+.autocomplete-overlay {
+	position: relative !important;
+}
+
+.autocomplete-container .input-container input {
+	overflow: hidden !important;
+	background-color: var(--bs-body-bg) !important;
+	background-clip: padding-box !important;
+	border: var(--bs-border-width) solid var(--bs-border-color) !important;
+	border-radius: var(--bs-border-radius) !important;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.autocomplete-container .not-found {
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.drawingBuffer {
+	display: none;
+}
+
+@keyframes laserBeam {
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: 60rem 0;
+	}
+}
+#ngx-barcode-scanner.ngx-bc {
+	&::before {
+    content: "";
+    animation: laserBeam 4s linear infinite;
+    background-image: radial-gradient(ellipse at 50% 50%, #dc3545 0%, rgba(221, 30, 49, 0) 50%, rgba(221, 30, 49, 0) 100%);
+    background-position: 0 0;
+    height: 8px;
+    width: 89%;
+    position: absolute;
+    z-index: 1;
+    top: calc(50% + 22px);
+    left: 18px;
+	}
+}
+#interactive.viewport {
+	padding: 8px 8px 0;
+	margin-top: 8px;
+	border-radius: 8px;
+	border: 1px solid var(--mc-primary-color);
+	&::before{
+    content: " ";
+    border: 1px solid #fff;
+    height: 15px;
+    width: 88%;
+    position: absolute;
+    left: 6%;
+    top: 34%;
+    z-index: 1;
+    filter: drop-shadow(0 0 5px #000);
+    border-bottom: none;
+	}
+	&::after{
+    content: " ";
+    border: 1px solid #fff;
+    height: 15px;
+    width: 89%;
+    position: absolute;
+    left: 6%;
+    top: 61%;
+    z-index: 1;
+    filter: drop-shadow(0 0 5px #000);
+    border-top: none;
+	}
+}
+
+.empty-state {
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	font-weight: 600;
+}
